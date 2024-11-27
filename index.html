@@ -1,1 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foogles shitty music player</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <h2 class="sidebar-title">My Music</h2>
+            <input type="file" id="fileInput" accept="audio/mp3" multiple>
+            <button id="playButton">Play Random MP3</button>
+            <h3 class="sidebar-subtitle">Played Songs</h3>
+            <ul id="playedSongs"></ul>
+            <h3 class="sidebar-subtitle">All Songs</h3>
+            <ul id="allSongs"></ul>
+        </aside>
+        <main class="main-content">
+            <h1 class="main-title">Foogles shitty music player</h1>
+            <div id="nowPlaying" class="now-playing">Now Playing: <span id="currentSong">None</span></div>
+            <audio id="audioPlayer" controls></audio>
+        </main>
+        <div id="settingsIcon" class="settings-icon">⚙️</div> <!-- Settings icon -->
+    </div>
 
+    <!-- Settings Modal -->
+    <div id="settingsModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Settings</h2>
+            <label for="bgColor">Background Color:</label>
+            <input type="color" id="bgColor" value="#121212"><br>
+            <label for="sidebarColor">Sidebar Color:</label>
+            <input type="color" id="sidebarColor" value="#1c1c1c"><br>
+            <label for="buttonColor">Button Color:</label>
+            <input type="color" id="buttonColor" value="#1DB954"><br>
+            <label for="bodyTextColor">Body Text Color:</label>
+            <input type="color" id="bodyTextColor" value="#ffffff"><br>
+            <label for="sidebarTextColor">Sidebar Text Color:</label>
+            <input type="color" id="sidebarTextColor" value="#1DB954"><br>
+            <label for="headingTextColor">Heading Text Color:</label>
+            <input type="color" id="headingTextColor" value="#ffffff"><br>
+            <label for="buttonTextColor">Button Text Color:</label>
+            <input type="color" id="buttonTextColor" value="#ffffff"><br>
+            <button id="applySettings">Apply Settings</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
